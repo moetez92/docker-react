@@ -3,6 +3,6 @@ sudo : required
        - docker
 
 before_install : 
-      - docker build -t mo3taz92/firstReact -f Dockerfile.dev .
+      - docker build -t mo3taz92/firstreact -f Dockerfile.dev .
 script : 
-      - docker run mo3taz92/firstReact  npm run test -- --coverage
+      - docker run mo3taz92/firstreact  npm run test -- --coverage
