@@ -18,3 +18,5 @@ script :
   app: "Todo"
   env: "Todo-env"
   bucket_name: "elasticbeanstalk-us-east-2-945568127520"
+  on:
+  branch: master
