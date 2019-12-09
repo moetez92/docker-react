@@ -8,6 +8,8 @@ before_install :
 script : 
       - docker run -e CI=true mo3taz92/firstreact  npm run test -- --coverage
 deploy:
+
+      edge: true
       provider : elasticbeanstalk
       region : "us-east-2"
       app : "Todo"
@@ -16,5 +18,6 @@ deploy:
       bucket_path: "Todo"
        on 
        branch: master
-       access_key: $Acess_Key
-       secret_access_key: $Secret_Key
+       access_key: $Access_Key
+       secret_access_key: 
+         secure:"$Secret_Key"
