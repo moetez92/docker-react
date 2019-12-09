@@ -1,3 +1,4 @@
+ 
 sudo : required
 services : 
        - docker
@@ -6,3 +7,14 @@ before_install :
       - docker build -t mo3taz92/firstreact -f Dockerfile.dev .
 script : 
       - docker run -e CI=true mo3taz92/firstreact  npm run test -- --coverage
+deploy:
+      provider : elasticbeanstalk
+      region : "us-east-2"
+      app : "Todo"
+      env : "Todo-env"
+      bucket_name : "elasticbeanstalk-us-east-2-945568127520"
+      bucket_path: "Todo"
+       on 
+       branch: master
+       access_key: $Acess_Key
+       secret_access_key: $Secret_Key
