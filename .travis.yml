@@ -16,6 +16,7 @@ deploy:
   app: "Todo"
   env: "Todo-env"
   bucket_name: "elasticbeanstalk-us-east-2-945568127520"
+  bucket_path: "Todo"
   on:
       branch: master 
     
